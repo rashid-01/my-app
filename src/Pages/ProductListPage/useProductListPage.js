@@ -16,13 +16,25 @@ function useProductListPage() {
         }
     }
 
+    const getProductList = async(cat_id) => {
+        console.log('catiiid', cat_id)
+        try {
+            let apiResponse = await HttpClient.request(`catalog/v1.0.1?category_id=${cat_id}`)
+            console.log('product data', apiResponse)
+        } catch (error) {
+            console.log('pro err', error)
+        }
+    }
+
     useEffect(() => {
         getCategoryList()
+        getProductList()
     }, [])
     
     return {
         categoryData,
-        pageHeading
+        pageHeading,
+        getProductList
     }
 }
 

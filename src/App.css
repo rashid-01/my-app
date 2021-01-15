@@ -66,3 +66,12 @@ form {
   background-color: #32CD32;
   color:#ffffff;
 }
+
+#rotate {
+   vertical-align:bottom;
+   transform:rotate(10deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+}

@@ -2,13 +2,19 @@ import React from 'react';
 import { Card, CardColumns, CardDeck, Col, Container, Row } from 'react-bootstrap';
 import ProductCard from '../Shared/ProductCard';
 
-function AppProductList() {
+function AppProductList(props) {
+    console.log('at List page', props)
+    const {productListData} = props
     return(
         <Container>
             <Row>
                 <Col sm={3}/>
                 <Col sm={6}>
-                    <ProductCard/>
+                    {
+                        productListData.map(data => {
+                            return(<ProductCard name={data.name} weight={data.weight} weight_unit={data.weight_unit} price={data.final_price} image={data.image_urls.x520} inStock={data.is_in_stock}/>)
+                        })
+                    }
                 </Col>
                 <Col sm={3}/>
             </Row>

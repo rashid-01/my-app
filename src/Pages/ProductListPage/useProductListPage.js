@@ -4,6 +4,7 @@ import HttpClient from '../../Utilities/HttpClient';
 function useProductListPage() {
     const [categoryData, setCategoryData] = useState([]);
     const [pageHeading, setPageHeading] = useState('');
+    const [productData, setProductData] = useState([]);
 
     const getCategoryList = async () => {
         try {
@@ -20,7 +21,7 @@ function useProductListPage() {
         console.log('catiiid', cat_id)
         try {
             let apiResponse = await HttpClient.request(`catalog/v1.0.1?category_id=${cat_id}`)
-            console.log('product data', apiResponse)
+            setProductData(apiResponse.data.products)
         } catch (error) {
             console.log('pro err', error)
         }
@@ -34,7 +35,8 @@ function useProductListPage() {
     return {
         categoryData,
         pageHeading,
-        getProductList
+        getProductList,
+        productData
     }
 }
 

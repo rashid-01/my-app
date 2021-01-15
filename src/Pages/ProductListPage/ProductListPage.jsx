@@ -4,13 +4,12 @@ import AppProductList from '../../Components/Layout/AppProductList';
 import useProductListPage from './useProductListPage';
 
 function ProductListPage() {
-    const { categoryData, pageHeading, getProductList } = useProductListPage()
-    console.log('all data', categoryData, pageHeading)
+    const { categoryData, pageHeading, getProductList, productData } = useProductListPage()
     return (
         <div>
             <h4>{pageHeading}</h4>
             <AppCategoryTab list={categoryData} onPress={getProductList}/>
-            <AppProductList/>
+            <AppProductList productListData={productData}/>
         </div>
     )
 }

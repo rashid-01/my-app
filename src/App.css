@@ -62,16 +62,37 @@ form {
   font-weight: 700;
 }
 
-.btn-green{
-  background-color: #32CD32;
+.btn-orange{
+  background-color: #FF4500;
   color:#ffffff;
+}
+
+.no-border{
+  border:0px solid;
+}
+
+.flex-8{
+  flex: 8;
+}
+
+.flex-2{
+  flex: 2;
+}
+
+.image-style{
+  height: 8em;
+  width: 100px;
+}
+
+.app-padding{
+  padding:35px;
 }
 
 #rotate {
    vertical-align:bottom;
    transform:rotate(10deg);
-  -ms-transform:rotate(90deg); /* IE 9 */
-  -moz-transform:rotate(90deg); /* Firefox */
-  -webkit-transform:rotate(90deg); /* Safari and Chrome */
-  -o-transform:rotate(90deg); /* Opera */
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -moz-transform:rotate(270deg); /* Firefox */
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -o-transform:rotate(270deg); /* Opera */
 }

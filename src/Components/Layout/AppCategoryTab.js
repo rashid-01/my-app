@@ -144,9 +144,6 @@ class AppCategoryTab extends Component {
           translate={translate}
           wheel={wheel}
         />
-        <div className="App">
-          <h4>You selected:{selected}</h4>
-        </div>
       </div>
     );
   }

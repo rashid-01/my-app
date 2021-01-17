@@ -11,9 +11,10 @@ function ProductListPage() {
         <Container class="app-padding">
             <h4>{pageHeading}</h4>
             <AppCategoryTab list={categoryData} onPress={getProductList} />
-            <div style={{ position: 'relative', float:'right' }}>
+            <AppSpacer/>
+            {/* <div style={{ position: 'relative', float:'right' }}>
                 <a href="#"  class="btn btn-lg btn-orange" id="rotate">Need Help</a>
-            </div>
+            </div> */}
             <AppProductList productListData={productData}/>
         </Container>
     )

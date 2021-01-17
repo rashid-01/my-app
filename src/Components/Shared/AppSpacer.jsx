@@ -1,18 +1,13 @@
 import React from "react";
 
-function AppSpacer(size, horizontal) {
+function AppSpacer() {
   return (
     <div
       style={{
-        [horizontal ? "width" : "height"]: size
+        padding:25
       }}
     ></div>
   );
 }
-
-AppSpacer.defaultProps = {
-  size: 10,
-  horizontal: false
-};
 
 export default AppSpacer;

@@ -6,7 +6,7 @@ function AppProductList(props) {
     console.log('at List page', props)
     const {productListData} = props
     return(
-        <Container class="app-padding">
+        <Container>
             <Row>
                 <Col sm={3}/>
                 <Col sm={6}>

@@ -12,9 +12,6 @@ function ProductListPage() {
             <h4>{pageHeading}</h4>
             <AppCategoryTab list={categoryData} onPress={getProductList} />
             <AppSpacer/>
-            {/* <div style={{ position: 'relative', float:'right' }}>
-                <a href="#"  class="btn btn-lg btn-orange" id="rotate">Need Help</a>
-            </div> */}
             <AppProductList productListData={productData}/>
         </Container>
     )

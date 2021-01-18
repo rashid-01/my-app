@@ -12,7 +12,6 @@ class HttpClient {
                 "Content-Type": "application/json; charset=utf-8"
             }
         }
-        console.log('Header', headers)
         return headers;
     }
     

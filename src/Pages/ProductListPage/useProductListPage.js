@@ -9,7 +9,6 @@ function useProductListPage() {
     const getCategoryList = async () => {
         try {
             let apiResponse = await HttpClient.request('homemenucategories/v1.0.1?device_type=mob');
-            console.log('data', apiResponse)
             setCategoryData(apiResponse.data.category_list)
             setPageHeading(apiResponse.data.heading)
         } catch (error) {

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import "../../App.css";
 
 const MenuItem = ({ text, selected, image }) => {
-    console.log('jkkk', text, image)
     return <div style={{backgroundImage:`url(${image})`, backgroundRepeat:'no-repeat', backgroundPosition:'center', textTransform:'uppercase'}} className={`menu-item ${selected ? "active" : ""}`}>{text}</div>;
 };
 
@@ -65,18 +63,15 @@ class AppCategoryTab extends Component {
 //   };
 
   onUpdate = ({ translate }) => {
-    console.log(`onUpdate: translate: ${translate}`);
     this.setState({ translate });
   };
 
   onSelect = (key) => {
-    console.log(`onSelect: ${key}`);
-    this.setState({ selected: key });
+    this.setState({ selected: key === undefined ? "Sale" : key});
     this.props.onPress(key === undefined ? this.state.selected : key)
   };
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('at tab', this.props)
     this.menu = null;
     this.menuItems = Menu(this.props.list.slice(0, this.props.list.length), this.state.selected);
     const { alignCenter } = prevState;

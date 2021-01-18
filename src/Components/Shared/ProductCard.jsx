@@ -24,12 +24,10 @@ function ProductCard(props){
                     <p class="text-muted mb-1">{weight}{weight_unit}</p>
                     <h5 class="card-text font-weight-bold">&#8377; {price}</h5>
                         <AppButton variant={inStock ? 'success' : 'secondary'} size={'lg'} buttonText={inStock ? 'ADD TO CART' : 'OUT OF STOCK'} isDisabled={!inStock}/>
-                        
                 </div>
             </div>
             </div>
         </div>
-        
     )
 }
 
